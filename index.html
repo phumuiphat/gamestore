@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Steam Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #171a21;
+            color: #e1e1e1;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1b2838;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #66c0f4;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px 0;
+            position: sticky;
+            top: 60px;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            color: #66c0f4;
+        }
+
+        .hero-section {
+            background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg'); /* ใส่ภาพจริง */
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.6);
+        }
+
+        .hero-section h2 {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        .game-gallery {
+            padding: 50px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .game-card {
+            width: 23%;
+            margin: 15px;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .game-card .game-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .game-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #66c0f4;
+        }
+
+        .game-card p {
+            color: #bbb;
+        }
+
+        .footer {
+            background-color: #171a21;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .game-card {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-card {
+                width: 100%;
+            }
+
+            .hero-section h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Game Store</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="page1.html">เกม</a></li>
+            <li><a href="page2.html">ข้อเสนอพิเศษ</a></li>
+            <li><a href="page3.html">ชุมชน</a></li>
+            <li><a href="page4.html">บัญชีของฉัน</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h2>ค้นพบเกมใหม่ที่คุณอาจรู้จัก</h2>
+    </div>
+
+    <!-- Main Content (Game Gallery) -->
+    <div class="game-gallery">
+        <!-- Game Card 1 -->
+        <div class="game-card">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="เกม 1">
+            <div class="game-info">
+                <h3>Grand theft Auto5</h3>
+                <p>เกมแอ็คชัน-ผจญภัยที่ให้ผู้เล่นเข้าถึงโลกเปิดในเมืองสมมติที่เต็มไปด้วยอาชญากรรมและภารกิจปล้น พร้อมกับโหมดออนไลน์ที่รองรับผู้เล่นหลายคนในโลกของการทำธุรกิจผิดกฎหมายและการหลบหนีจากตำรวจ.</p>
+            </div>
+        </div>
+
+        <!-- Game Card 2 -->
+        <div class="game-card">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="เกม 2">
+            <div class="game-info">
+                <h3>Counter Strike 2</h3>
+                <p>เกมยิงมุมมองบุคคลที่หนึ่งที่ให้ผู้เล่นแบ่งทีมระหว่างผู้ก่อการร้ายและหน่วยต่อต้านการก่อการร้าย เพื่อลงมือทำภารกิจสำคัญ เช่น การวางระเบิดหรือการปกป้องตัวประกัน เกมนี้เน้นความสมจริงและการทำงานร่วมกันในทีม.</p>
+            </div>
+        </div>
+
+        <!-- Game Card 3 -->
+        <div class="game-card">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg" alt="เกม 3">
+            <div class="game-info">
+                <h3>Doat 2</h3>
+                <p>เกม MOBA ที่ผู้เล่นแบ่งเป็นทีม 5 คน และควบคุมฮีโร่ที่มีความสามารถเฉพาะตัวเพื่อต่อสู้และทำลายฐานของทีมตรงข้าม เกมนี้เน้นกลยุทธ์ การทำงานเป็นทีม และความสามารถในการพัฒนาฮีโร่ในระหว่างเกม.
+                </p>
+            </div>
+        </div>
+
+        <!-- Game Card 4 -->
+        <div class="game-card">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/431960/header.jpg" alt="เกม 4">
+            <div class="game-info">
+                <h3>Wallpaper Engine</h3>
+                <p>โปรแกรมที่ให้ผู้ใช้สามารถตั้งวอลเปเปอร์เคลื่อนไหวบนเดสก์ท็อป และปรับแต่งได้ตามต้องการ ไม่ว่าจะเป็นภาพ, วิดีโอ หรือเว็บเพจ พร้อมฟีเจอร์ที่ช่วยให้การใช้งานประหยัดพลังงาน.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Steam Store | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html> 
