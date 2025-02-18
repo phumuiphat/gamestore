@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>บัญชีของฉัน - Game Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #171a21;
+            color: #e1e1e1;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1b2838;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #66c0f4;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px 0;
+            position: sticky;
+            top: 60px;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            color: #66c0f4;
+        }
+
+        .account-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .account-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .account-card {
+            width: 50%;
+            margin: 20px auto;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            text-align: left;
+        }
+
+        .account-card h3 {
+            font-size: 2rem;
+            color: #66c0f4;
+            margin-bottom: 10px;
+        }
+
+        .account-card label {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .account-card input, .account-card textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #444;
+            border: 1px solid #666;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .account-card button {
+            width: 100%;
+            padding: 12px;
+            background-color: #66c0f4;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .account-card button:hover {
+            background-color: #5ba8c3;
+        }
+
+        .recent-activity {
+            margin-top: 50px;
+        }
+
+        .activity-card {
+            background-color: #2a2a2a;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            color: #e1e1e1;
+        }
+
+        .activity-card h4 {
+            font-size: 1.5rem;
+            color: #66c0f4;
+            margin-bottom: 10px;
+        }
+
+        .activity-card p {
+            color: #bbb;
+        }
+
+        .footer {
+            background-color: #171a21;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .account-card {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .account-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Game Store</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="page1.html">เกม</a></li>
+            <li><a href="page2.html">ข้อเสนอพิเศษ</a></li>
+            <li><a href="page3.html">ชุมชน</a></li>
+            <li><a href="page4.html">บัญชีของฉัน</a></li>
+        </ul>
+    </nav>
+
+    <!-- Account Section -->
+    <div class="account-section">
+        <h2>บัญชีของฉัน</h2>
+
+        <!-- Account Details Card -->
+        <div class="account-card">
+            <h3>ข้อมูลส่วนตัว</h3>
+            <label for="username">ชื่อผู้ใช้</label>
+            <input type="text" id="username" placeholder="ชื่อผู้ใช้ของคุณ">
+            <label for="email">อีเมล</label>
+            <input type="email" id="email" placeholder="อีเมลของคุณ">
+            <label for="password">รหัสผ่าน</label>
+            <input type="password" id="password" placeholder="รหัสผ่านใหม่">
+            <label for="bio">ข้อมูลส่วนตัว</label>
+            <textarea id="bio" rows="4" placeholder="เขียนเกี่ยวกับตัวคุณ..."></textarea>
+            <button>บันทึกการเปลี่ยนแปลง</button>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="recent-activity">
+            <h2>กิจกรรมล่าสุดของคุณ</h2>
+
+            <!-- Activity Card 1 -->
+            <div class="activity-card">
+                <h4>Counter strike 2</h4>
+                <p>คุณได้เพิ่มเกมนี้ในรายการที่ชอบเมื่อ 2 วันก่อน</p>
+            </div>
+
+            <!-- Activity Card 2 -->
+            <div class="activity-card">
+                <h4>Minecarft</h4>
+                <p>คุณได้เขียนรีวิวสำหรับเกมนี้เมื่อ 5 วันก่อน</p>
+            </div>
+
+            <!-- Activity Card 3 -->
+            <div class="activity-card">
+                <h4>War Tunder</h4>
+                <p>คุณได้เข้าร่วมกิจกรรมพิเศษเมื่อ 1 สัปดาห์ก่อน</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Steam Store | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
