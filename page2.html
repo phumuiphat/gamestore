@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ข้อเสนอพิเศษ - Steam Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #171a21;
+            color: #e1e1e1;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #1b2838;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            color: #66c0f4;
+        }
+        
+        nav {
+            background-color: #222;
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .offer-section {
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .offer-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .offer-item {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .offer-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .offer-item h3 {
+            color: #66c0f4;
+            margin: 15px 0;
+        }
+        
+        .discount {
+            color: #ffcc00;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        
+        .footer {
+            background-color: #171a21;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ข้อเสนอพิเศษ</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="page1.html">เกม</a></li>
+            <li><a href="page2.html">ข้อเสนอพิเศษ</a></li>
+            <li><a href="page3.html">ชุมชน</a></li>
+            <li><a href="page4.html">บัญชีของฉัน</a></li>
+        </ul>
+    </nav>
+    
+    <section class="offer-section">
+        <h2>ลดราคาสุดพิเศษ!</h2>
+        <div class="offer-list">
+            <div class="offer-item">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg" alt="Game">
+                <h3>DOta 2</h3>
+                <p class="discount">ลด 50%</p>
+            </div>
+            <div class="offer-item">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="Game">
+                <h3>Counter Strike 2</h3>
+                <p class="discount">ลด 30%</p>
+            </div>
+            <div class="offer-item">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="Game">
+                <h3>GTAV</h3>
+                <p class="discount">ลด 60%</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Steam Store | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
