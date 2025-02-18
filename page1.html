@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Steam Store - เกมทั้งหมด</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #171a21;
+            color: #e1e1e1;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1b2838;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #66c0f4;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px 0;
+            position: sticky;
+            top: 60px;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            color: #66c0f4;
+        }
+
+        .search-container {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #444;
+            width: 40%;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .category-section {
+            padding: 30px;
+        }
+
+        .category-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #66c0f4;
+            text-align: center;
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .category-item {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .category-item:hover {
+            transform: scale(1.05);
+        }
+
+        .category-item h3 {
+            font-size: 1.5rem;
+            color: #66c0f4;
+            margin-bottom: 10px;
+        }
+
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
+
+        .game-item {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            width: 220px;
+            margin: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .game-item:hover {
+            transform: scale(1.05);
+        }
+
+        .game-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .game-item h4 {
+            font-size: 1.2rem;
+            color: #66c0f4;
+            margin-bottom: 10px;
+        }
+
+        .game-item p {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 10px;
+        }
+
+        .game-item button {
+            padding: 10px 20px;
+            background-color: #66c0f4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .game-item button:hover {
+            background-color: #5ba8c3;
+        }
+
+        .footer {
+            background-color: #171a21;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .category-item {
+                width: 45%;
+            }
+
+            .game-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category-item {
+                width: 90%;
+            }
+
+            .game-item {
+                width: 90%;
+            }
+
+            .search-container input {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Steam Store - เกมทั้งหมด</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="page1.html">เกม</a></li>
+            <li><a href="page2.html">ข้อเสนอพิเศษ</a></li>
+            <li><a href="page3.html">ชุมชน</a></li>
+            <li><a href="page4.html">บัญชีของฉัน</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Section -->
+    <div class="search-container">
+        <h2>ค้นหาคุณภาพเกมที่ดีที่สุด</h2>
+        <input type="text" id="search-box" placeholder="ค้นหาเกม..." />
+    </div>
+
+    <!-- Category Section -->
+    <div class="category-section">
+        <h2>หมวดหมู่เกม</h2>
+        <div class="category-list">
+            <div class="category-item" onclick="showGames('action')">
+                <h3>แอ็คชัน</h3>
+            </div>
+            <div class="category-item" onclick="showGames('adventure')">
+                <h3>ผจญภัย</h3>
+            </div>
+            <div class="category-item" onclick="showGames('simulation')">
+                <h3>จำลอง</h3>
+            </div>
+            <div class="category-item" onclick="showGames('sports')">
+                <h3>กีฬา</h3>
+            </div>
+            <div class="category-item" onclick="showGames('strategy')">
+                <h3>กลยุทธ์</h3>
+            </div>
+            <div class="category-item" onclick="showGames('indie')">
+                <h3>อินดี้</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game List -->
+    <div id="game-list" class="game-list">
+        <!-- Games will be injected here dynamically -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Steam Store | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Game data for each category with images
+        const gamesData = {
+            action: [
+                { 
+                    title: "เกมแอ็คชันตัวอย่าง 1", 
+                    description: "เกมแอ็คชันที่มีการต่อสู้และภารกิจสุดมันส์!", 
+                    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg"
+                },
+                { 
+                    title: "เกมแอ็คชันตัวอย่าง 2", 
+                    description: "ต่อสู้กับศัตรูในโลกที่ท้าทาย!", 
+                    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg"
+                }
+            ],
+            adventure: [
+                { 
+                    title: "เกมผจญภัยตัวอย่าง 1", 
+                    description: "เกมที่เต็มไปด้วยการสำรวจและการผจญภัยในโลกเปิด!", 
+                    image: "https://via.placeholder.com/220x140?text=Adventure+Game+1"
+                },
+                { 
+                    title: "เกมผจญภัยตัวอย่าง 2", 
+                    description: "ตามหาความลับในโลกที่ถูกลืมไป!", 
+                    image: "https://via.placeholder.com/220x140?text=Adventure+Game+2"
+                }
+            ],
+            simulation: [
+                { 
+                    title: "เกมจำลองตัวอย่าง 1", 
+                    description: "สร้างและจัดการเมืองของคุณในเกมจำลองสุดตื่นเต้น!", 
+                    image: "https://via.placeholder.com/220x140?text=Simulation+Game+1"
+                },
+                { 
+                    title: "เกมจำลองตัวอย่าง 2", 
+                    description: "จำลองการขับรถในเมืองใหญ่!", 
+                    image: "https://via.placeholder.com/220x140?text=Simulation+Game+2"
+                }
+            ],
+            sports: [
+                { 
+                    title: "เกมกีฬาตัวอย่าง 1", 
+                    description: "เข้าร่วมการแข่งขันกีฬาและทำลายสถิติใหม่!", 
+                    image: "https://via.placeholder.com/220x140?text=Sports+Game+1"
+                },
+                { 
+                    title: "เกมกีฬาตัวอย่าง 2", 
+                    description: "แข่งขันในสนามฟุตบอลที่ดีที่สุด!", 
+                    image: "https://via.placeholder.com/220x140?text=Sports+Game+2"
+                }
+            ],
+            strategy: [
+                { 
+                    title: "เกมกลยุทธ์ตัวอย่าง 1", 
+                    description: "วางแผนและพิชิตชัยในการทำสงครามทางกลยุทธ์!", 
+                    image: "https://via.placeholder.com/220x140?text=Strategy+Game+1"
+                },
+                { 
+                    title: "เกมกลยุทธ์ตัวอย่าง 2", 
+                    description: "สร้างอาณาจักรและต่อสู้กับศัตรู!", 
+                    image: "https://via.placeholder.com/220x140?text=Strategy+Game+2"
+                }
+            ],
+            indie: [
+                { 
+                    title: "เกมอินดี้ตัวอย่าง 1", 
+                    description: "เกมที่มาพร้อมกับเรื่องราวและความคิดสร้างสรรค์!", 
+                    image: "https://via.placeholder.com/220x140?text=Indie+Game+1"
+                },
+                { 
+                    title: "เกมอินดี้ตัวอย่าง 2", 
+                    description: "สัมผัสการผจญภัยในโลกแปลกใหม่!", 
+                    image: "https://via.placeholder.com/220x140?text=Indie+Game+2"
+                }
+            ]
+        };
+
+        // Function to show games for the selected category
+        function showGames(category) {
+            const gameList = document.getElementById('game-list');
+            gameList.innerHTML = ''; // Clear previous games
+            
+            // Loop through the games in the selected category and display them
+            gamesData[category].forEach(game => {
+                const gameItem = document.createElement('div');
+                gameItem.classList.add('game-item');
+
+                gameItem.innerHTML = `
+                    <img src="${game.image}" alt="${game.title}">
+                    <h4>${game.title}</h4>
+                    <p>${game.description}</p>
+                    <button>ซื้อเกม</button>
+                `;
+                gameList.appendChild(gameItem);
+            });
+        }
+    </script>
+</body>
+</html>
