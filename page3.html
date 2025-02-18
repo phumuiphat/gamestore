@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ชุมชน - Game Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #171a21;
+            color: #e1e1e1;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1b2838;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #66c0f4;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px 0;
+            position: sticky;
+            top: 60px;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            color: #66c0f4;
+        }
+
+        .community-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .community-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .community-card {
+            width: 23%;
+            margin: 15px;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .community-card:hover {
+            transform: scale(1.05);
+        }
+
+        .community-card h3 {
+            font-size: 1.5rem;
+            color: #66c0f4;
+            margin-bottom: 10px;
+        }
+
+        .community-card p {
+            color: #bbb;
+            margin-bottom: 15px;
+        }
+
+        .community-card a {
+            text-decoration: none;
+            color: #66c0f4;
+            font-weight: 600;
+        }
+
+        .review-section {
+            margin-top: 50px;
+        }
+
+        .review-title {
+            font-size: 2rem;
+            color: #66c0f4;
+            margin-bottom: 20px;
+        }
+
+        .review-container {
+            margin-bottom: 30px;
+        }
+
+        .star-rating {
+            display: inline-block;
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .star-rating span {
+            cursor: pointer;
+        }
+
+        .like-dislike {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .like-dislike span {
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .like-dislike span:hover {
+            color: #66c0f4;
+        }
+
+        .footer {
+            background-color: #171a21;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .community-card {
+                width: 48%;
+            }
+
+            .review-container {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .community-card {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Game Store</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="page1.html">เกม</a></li>
+            <li><a href="page2.html">ข้อเสนอพิเศษ</a></li>
+            <li><a href="page3.html">ชุมชน</a></li>
+            <li><a href="page4.html">บัญชีของฉัน</a></li>
+        </ul>
+    </nav>
+
+    <!-- Community Section -->
+    <div class="community-section">
+        <h2>ชุมชนของเรา</h2>
+        <div class="community-card">
+            <h3>ฟอรัมเกม</h3>
+            <p>เข้าร่วมการสนทนาเกี่ยวกับเกมและแบ่งปันประสบการณ์ของคุณ!</p>
+            <a href="#">เข้าร่วมฟอรัม</a>
+        </div>
+        <div class="community-card">
+            <h3>รีวิวจากผู้เล่น</h3>
+            <p>อ่านและเขียนรีวิวเกี่ยวกับเกมที่คุณชื่นชอบ</p>
+            <a href="#">อ่านรีวิว</a>
+        </div>
+        <div class="community-card">
+            <h3>กิจกรรมพิเศษ</h3>
+            <p>เข้าร่วมกิจกรรมพิเศษและแข่งขันกับผู้เล่นคนอื่นๆ</p>
+            <a href="#">ดูกิจกรรม</a>
+        </div>
+        <div class="community-card">
+            <h3>ข่าวสารและการอัปเดต</h3>
+            <p>ติดตามข่าวสารล่าสุดเกี่ยวกับเกมและการอัปเดต</p>
+            <a href="#">อ่านข่าวสาร</a>
+        </div>
+    </div>
+
+    <!-- Review Section -->
+    <div class="review-section">
+        <h2 class="review-title">รีวิวเกมของคุณ</h2>
+
+        <!-- Review Container -->
+        <div class="review-container">
+            <h3>GTAV(5)</h3>
+            <div class="star-rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </div>
+            <div class="like-dislike">
+                <span>👍</span>
+                <span>👎</span>
+            </div>
+            <textarea placeholder="แสดงความคิดเห็นของคุณ..." rows="4" style="width: 100%; margin-top: 10px;"></textarea>
+        </div>
+
+        <!-- Another Review Container -->
+        <div class="review-container">
+            <h3>Dota 2</h3>
+            <div class="star-rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </div>
+            <div class="like-dislike">
+                <span>👍</span>
+                <span>👎</span>
+            </div>
+            <textarea placeholder="แสดงความคิดเห็นของคุณ..." rows="4" style="width: 100%; margin-top: 10px;"></textarea>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Steam Store | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
